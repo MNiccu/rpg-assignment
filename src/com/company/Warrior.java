@@ -3,7 +3,7 @@ package com.company;
 import com.company.Items.ArmorType;
 import com.company.Items.WeaponType;
 
-public class Mage extends Hero {
+public class Warrior extends Hero {
 
     @Override
     public int getMainStatValue() {
@@ -58,39 +58,27 @@ public class Mage extends Hero {
 
     public int MainStatValue;
 
-   // public ArmorType MaxArmorType;
-
-   // public ArmorType MinArmorType;
-
-   // public WeaponType MaxWeaponType;
-
-   // public WeaponType MinWeaponType;
-
-
-
-    public Mage() {
+    public Warrior() {
     }
 
-    public Mage(String name, int lvl)
+    public Warrior(String name, int lvl)
     {
 
-        MaxArmorType = ArmorType.Cloth;
-        MinArmorType = ArmorType.Cloth;
-        MaxWeaponType = WeaponType.Wand;
-        MinWeaponType = WeaponType.Staff;
-
+        MaxArmorType = ArmorType.Plate;
+        MinArmorType = ArmorType.Mail;
+        MaxWeaponType = WeaponType.Hammer;
+        MinWeaponType = WeaponType.Sword;
 
         Name = name;
         Level = lvl;
-        ClassName = "Mage";
+        ClassName = "Warrior";
 
         BasePrimaryAttributes = new PrimaryAttributes();
 
-        BasePrimaryAttributes.setVitality(5);
-        BasePrimaryAttributes.setStrength(1);
-        BasePrimaryAttributes.setDexterity(1);
-        BasePrimaryAttributes.setIntelligence(8);
-
+        BasePrimaryAttributes.setVitality(10);
+        BasePrimaryAttributes.setStrength(5);
+        BasePrimaryAttributes.setDexterity(2);
+        BasePrimaryAttributes.setIntelligence(1);
 
 
 
@@ -106,12 +94,11 @@ public class Mage extends Hero {
     @Override
     public void LevelUp(){
         Level = Level +1;
-        BasePrimaryAttributes.Dexterity++;
-        BasePrimaryAttributes.Strength++ ;
-        BasePrimaryAttributes.Intelligence += 5;
-        BasePrimaryAttributes.Vitality += 3;
+        BasePrimaryAttributes.Dexterity += 2;
+        BasePrimaryAttributes.Strength += 3 ;
+        BasePrimaryAttributes.Intelligence++;
+        BasePrimaryAttributes.Vitality += 5;
 
         RefreshStats();
     }
-
 }

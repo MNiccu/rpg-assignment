@@ -23,6 +23,7 @@ public class Weapon extends Item {
     }
     public WeaponType WeaponType;
 
+
     public Weapon(){
 
     }
@@ -31,13 +32,12 @@ public class Weapon extends Item {
         ItemLvl = level;
         Slot = ItemSlot.Weapon;
 
-        WeaponAttributes wpnAttributes = new WeaponAttributes();
-        wpnAttributes.setDamage(damage);
-        wpnAttributes.setAttackSpeed(attackSpeed);
+        WeaponAttributes = new WeaponAttributes();
 
+        WeaponAttributes.setDamage(damage);
+        WeaponAttributes.setAttackSpeed(attackSpeed);
 
         WeaponType = weapontype;
-
 
     }
 

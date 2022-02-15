@@ -3,7 +3,7 @@ package com.company;
 import com.company.Items.ArmorType;
 import com.company.Items.WeaponType;
 
-public class Mage extends Hero {
+public class Rogue extends Hero{
 
     @Override
     public int getMainStatValue() {
@@ -58,39 +58,27 @@ public class Mage extends Hero {
 
     public int MainStatValue;
 
-   // public ArmorType MaxArmorType;
-
-   // public ArmorType MinArmorType;
-
-   // public WeaponType MaxWeaponType;
-
-   // public WeaponType MinWeaponType;
-
-
-
-    public Mage() {
+    public Rogue() {
     }
 
-    public Mage(String name, int lvl)
+    public Rogue(String name, int lvl)
     {
 
-        MaxArmorType = ArmorType.Cloth;
-        MinArmorType = ArmorType.Cloth;
-        MaxWeaponType = WeaponType.Wand;
-        MinWeaponType = WeaponType.Staff;
-
+        MaxArmorType = ArmorType.Mail;
+        MinArmorType = ArmorType.Leather;
+        MaxWeaponType = WeaponType.Sword;
+        MinWeaponType = WeaponType.Dagger;
 
         Name = name;
         Level = lvl;
-        ClassName = "Mage";
+        ClassName = "Rogue";
 
         BasePrimaryAttributes = new PrimaryAttributes();
 
-        BasePrimaryAttributes.setVitality(5);
-        BasePrimaryAttributes.setStrength(1);
-        BasePrimaryAttributes.setDexterity(1);
-        BasePrimaryAttributes.setIntelligence(8);
-
+        BasePrimaryAttributes.setVitality(8);
+        BasePrimaryAttributes.setStrength(2);
+        BasePrimaryAttributes.setDexterity(6);
+        BasePrimaryAttributes.setIntelligence(1);
 
 
 
@@ -106,9 +94,9 @@ public class Mage extends Hero {
     @Override
     public void LevelUp(){
         Level = Level +1;
-        BasePrimaryAttributes.Dexterity++;
+        BasePrimaryAttributes.Dexterity += 4;
         BasePrimaryAttributes.Strength++ ;
-        BasePrimaryAttributes.Intelligence += 5;
+        BasePrimaryAttributes.Intelligence++;
         BasePrimaryAttributes.Vitality += 3;
 
         RefreshStats();

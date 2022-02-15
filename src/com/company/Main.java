@@ -15,20 +15,26 @@ public class Main {
     public static void main(String[] args) {
 
         heroes.add(new Mage("Dude", 1));
-        //heroes.add(new Ranger("Glorp", 1));
-        //heroes.add(new Warrior("Mondo", 1));
-        //heroes.add(new Rogue("Edgelord", 1));
+        heroes.add(new Ranger("Glorp", 1));
+        heroes.add(new Warrior("Mondo", 1));
+        heroes.add(new Rogue("Edgelord", 1));
 
         Armor armor = new Armor("leggings of coding", 1, ItemSlot.Legs, ArmorType.Cloth, 1, 2, 3, 2);
+        Armor armor2 = new Armor("hat of pain", 3, ItemSlot.Head, ArmorType.Leather, 4,2,0,2);
+        Armor armor3 = new Armor("leggings of shame", 1, ItemSlot.Legs, ArmorType.Cloth, 6, 6, 1, 1);
         Weapon weapon = new Weapon("staff of staff management", 1, WeaponType.Staff, 4, 1);
+        Weapon weapon2 = new Weapon("Sword of swordness", 2, WeaponType.Sword, 7, 1);
         items.add(armor);
+        items.add(armor2);
+        items.add(armor3);
         items.add(weapon);
+        items.add(weapon2);
 
 
         Scanner scanner = new Scanner(System.in);
 
-        boolean a = true;
-        while (a) {
+
+        while (true) {
             System.out.println("HERO INTERFACE");
             System.out.println("\n1: Create Hero\n2: Display chosen Hero\n3: Level up Hero\n4: Equip item");
             String choice1 = scanner.nextLine();
@@ -46,7 +52,7 @@ public class Main {
                 EquipSomething();
             } else {
                 //any other input ends program
-                a = false;
+                break;
             }
 
 
