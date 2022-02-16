@@ -192,7 +192,7 @@ public class Hero {
         SecondaryAttributes.Health = TotalPrimaryAttributes.Vitality * 10;
         SecondaryAttributes.ArmorRating = TotalPrimaryAttributes.Strength + TotalPrimaryAttributes.Dexterity;
         SecondaryAttributes.ElementalResistance = TotalPrimaryAttributes.Intelligence;
-
+        MainStatValue = getMainStatValue();
 
         if (Equipment.containsKey(ItemSlot.Weapon))
         {

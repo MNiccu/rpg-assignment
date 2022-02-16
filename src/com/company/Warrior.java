@@ -7,7 +7,7 @@ public class Warrior extends Hero {
 
     @Override
     public int getMainStatValue() {
-        return MainStatValue;
+        return getTotalPrimaryAttributes().getStrength();
     }
 
     @Override

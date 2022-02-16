@@ -7,7 +7,7 @@ public class Mage extends Hero {
 
     @Override
     public int getMainStatValue() {
-        return MainStatValue;
+        return getTotalPrimaryAttributes().getIntelligence();
     }
 
     @Override
@@ -79,7 +79,7 @@ public class Mage extends Hero {
         MaxWeaponType = WeaponType.Wand;
         MinWeaponType = WeaponType.Staff;
 
-        MainStatValue = getTotalPrimaryAttributes().Intelligence;
+
 
 
         Name = name;

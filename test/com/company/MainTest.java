@@ -62,7 +62,7 @@ class MainTest {
         Mage hero = new Mage("testman", 1);
         Weapon weapon = new Weapon("testweapon", 1,WeaponType.Staff, 4, 2);
         hero.Equip(weapon);
-        Assertions.assertEquals(hero.getDamagePerSecond(), 8);
+        Assertions.assertEquals(hero.getDamagePerSecond(), 8.64);
     }
     @Test
     void CheckDpsWithWeaponAndArmor_Valid_ShouldPass() throws InvalidArmorException, InvalidWeaponException, InvalidItemLvlException{
@@ -71,7 +71,7 @@ class MainTest {
         Armor armor = new Armor("testarmor", 1, ItemSlot.Legs, ArmorType.Cloth, 6, 6, 10, 1);
         hero.Equip(weapon);
         hero.Equip(armor);
-        Assertions.assertEquals(hero.getDamagePerSecond(), 8);
+        Assertions.assertEquals(hero.getDamagePerSecond(), 9.44);
     }
 
 

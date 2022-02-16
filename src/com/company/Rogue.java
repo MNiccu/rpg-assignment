@@ -7,7 +7,7 @@ public class Rogue extends Hero{
 
     @Override
     public int getMainStatValue() {
-        return MainStatValue;
+        return getTotalPrimaryAttributes().getDexterity();
     }
 
     @Override
