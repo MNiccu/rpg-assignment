@@ -109,7 +109,7 @@ public class Main {
         //chosen hero, equip chosen item
         try {
             heroes.get(choice).Equip(items.get(choice2));
-        } catch (InvalidArmorException | InvalidWeaponException e) {
+        } catch (InvalidArmorException | InvalidWeaponException | InvalidItemLvlException e) {
             e.printStackTrace();
         }
 

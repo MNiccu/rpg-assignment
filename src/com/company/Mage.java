@@ -79,6 +79,8 @@ public class Mage extends Hero {
         MaxWeaponType = WeaponType.Wand;
         MinWeaponType = WeaponType.Staff;
 
+        MainStatValue = getTotalPrimaryAttributes().Intelligence;
+
 
         Name = name;
         Level = lvl;

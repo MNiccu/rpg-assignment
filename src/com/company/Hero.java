@@ -209,10 +209,10 @@ public class Hero {
     }
 
 
-    public void Equip (Item item) throws InvalidArmorException, InvalidWeaponException  {
+    public void Equip (Item item) throws InvalidArmorException, InvalidWeaponException, InvalidItemLvlException  {
 
         if( item.ItemLvl > Level){
-            System.out.println("Item level too high.\n");
+            throw new InvalidItemLvlException();
         }
         if (item.Slot == ItemSlot.Weapon) {
             EquipWeapon((Weapon)item);
